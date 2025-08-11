@@ -2,8 +2,7 @@ import streamlit as st
 import os
 import gdown
 import pandas as pd
-from comment_scraper import extract_vid_id,get_video_info,get_comments,get_channel_id,get_channel_info,youtube,api_key
-from sentiment_analysis import analyse_comments
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import requests
@@ -12,7 +11,9 @@ import requests
 MODEL_URL = "https://drive.google.com/file/d/12zPlTmCuzd3Pza9Kyh3lfJ8ZLZ3z0lGP/view?usp=drivesdk"
 if not os.path.exists("models.pkl"):
     gdown.download(MODEL_URL, "models.pkl", quiet=False)
-
+    
+from comment_scraper import extract_vid_id,get_video_info,get_comments,get_channel_id,get_channel_info,youtube,api_key
+from sentiment_analysis import analyse_comments
 
 def show_visualizations(df):
     sentiment_counts = df.value_counts()
@@ -169,6 +170,7 @@ if vid_id:
 
             
           
+
 
 
 
