@@ -48,13 +48,6 @@ def analyse_comments(df):
         processed_comment = processed_comment.lower()
         processed_comments.append(processed_comment)
 
-
-
-    # import nltk
-    # nltk.download('stopwords')
-    # from nltk.corpus import stopwords
-    # from sklearn.feature_extraction.text import TfidfVectorizer
-    # vectorizer = TfidfVectorizer(max_features=5000, stop_words=stopwords.words('english'))
     vectorizer = models[1]['vectorizer']
     processed_comments = vectorizer.transform(processed_comments).toarray()
 
@@ -71,3 +64,4 @@ if __name__ == '__main__':
     df = pd.Series(senti)
     print(df.value_counts()[0],df.value_counts()[1])
     # show_visualizations(df)
+
