@@ -36,8 +36,8 @@ A Streamlit web app that fetches comments from YouTube videos and performs **sen
 
 2. Install dependencies  
 
-```bash
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 3. Add your YouTube API key
 
@@ -45,5 +45,5 @@ Open the code and replace "YOUR_API_KEY" with your actual API key.
 
 4. Run the Streamlit app
 
-```bash
-streamlit run app.py
+   ```bash
+   streamlit run app.py
