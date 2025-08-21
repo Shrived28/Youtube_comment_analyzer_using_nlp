@@ -71,13 +71,8 @@ def get_comments(api_key, videolink):
             df.to_csv(f"{vid_id}_user_comments.csv", index=False, encoding='utf-8')
             break
 
-def main():
-    api_key = "AIzaSyCiOK0506q-uyqaG9lZy8b0TjWz1M5Pp50"
-    # link = https://www.youtube.com/watch?v=3y5A4paFOb4 https://www.youtube.com/watch?v=lC9emrW0F2o "https://www.youtube.com/watch?v=hkb8oCMrxDg  #https://www.youtube.com/watch?v=YR12Z8f1Dh8  https://www.youtube.com/watch?v=-2RAq5o5pwc"
-    link = "https://www.youtube.com/watch?v=73_1biulkYk"
-    # https://www.youtube.com/watch?v=uxbQATBAXf8  https://www.youtube.com/watch?v=uxb  https://www.youtube.com/watch?v=tahjluBe--E
-    get_comments(api_key,link)
-
-
 if __name__ == "__main__":
-    main()
+    api_key = "AIzaSyCiOK0506q-uyqaG9lZy8b0TjWz1M5Pp50"
+    links = ["https://www.youtube.com/watch?v=uxbQATBAXf8", "https://www.youtube.com/watch?v=uxb",  "https://www.youtube.com/watch?v=tahjluBe--E","https://www.youtube.com/watch?v=73_1biulkYk",'https://www.youtube.com/watch?v=3y5A4paFOb4', "https://www.youtube.com/watch?v=lC9emrW0F2o", "https://www.youtube.com/watch?v=hkb8oCMrxDg",  "https://www.youtube.com/watch?v=YR12Z8f1Dh8", "https://www.youtube.com/watch?v=-2RAq5o5pwc"]
+    for link in links:
+        get_comments(api_key,link)
