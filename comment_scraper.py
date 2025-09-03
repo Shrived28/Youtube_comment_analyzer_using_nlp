@@ -4,12 +4,9 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from time import sleep
 import traceback
-# import certifi
-# import httplib2
+import streamlit as st
+api_key = st.secrets["api_key"]
 
-# # Force httplib2 to use certifi's certs
-# httplib2.CA_CERTS = certifi.where()
-api_key = "AIzaSyCiOK0506q-uyqaG9lZy8b0TjWz1M5Pp50"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 def extract_vid_id(link):
@@ -140,4 +137,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
