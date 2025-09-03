@@ -72,7 +72,8 @@ def get_comments(api_key, videolink):
             break
 
 if __name__ == "__main__":
-    api_key = "AIzaSyCiOK0506q-uyqaG9lZy8b0TjWz1M5Pp50"
+    api_key = "YOUR_API_KEY"
     links = ["https://www.youtube.com/watch?v=uxbQATBAXf8", "https://www.youtube.com/watch?v=uxb",  "https://www.youtube.com/watch?v=tahjluBe--E","https://www.youtube.com/watch?v=73_1biulkYk",'https://www.youtube.com/watch?v=3y5A4paFOb4', "https://www.youtube.com/watch?v=lC9emrW0F2o", "https://www.youtube.com/watch?v=hkb8oCMrxDg",  "https://www.youtube.com/watch?v=YR12Z8f1Dh8", "https://www.youtube.com/watch?v=-2RAq5o5pwc"]
     for link in links:
         get_comments(api_key,link)
+
